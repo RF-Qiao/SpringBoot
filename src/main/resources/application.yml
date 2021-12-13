@@ -1,0 +1,21 @@
+server:
+  port: 8088
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/springboot?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  main:
+    allow-bean-definition-overriding: true
+mybatis:
+  mapper-locations: classpath:Mapper/*.xml
+
+#分页插件配置
+pagehelper:
+  helper-dialect: mysql
+  support-methods-arguments: true
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
